@@ -1,0 +1,214 @@
+*{
+    
+    box-sizing: border-box;
+}
+
+body{
+    color:#222;
+}
+#wrapper{
+    background-color: #ddd;
+}
+#navbar {
+    position: fixed;
+    top:0;
+    left:0;
+    height:60px;
+    background-color: black;
+    display: block;
+    width:100%;
+    z-index: 10;
+}
+
+#navbar nav, .row{
+    display: flex;
+}
+
+#navbar nav a{
+    flex:0 0 25vw;
+    text-align: center;
+    font-size: 2em;
+    color:#eee;
+    text-decoration: none;
+    height:60px;
+    line-height: 2em;
+    cursor:pointer;
+}
+#navbar nav a:hover{
+    background-color:#222;
+    color:white;
+}
+
+
+#home{
+    background-image: url('https://lorempixel.com/output/abstract-q-c-640-480-3.jpg');
+    background-size: cover;
+}
+
+.page{
+    height: auto;
+    min-height:100vh;
+    padding: 60px 10px;
+    background-color: #eee;
+}
+.jumbotron{
+    background-color: rgba(248, 216, 216, 0.5);
+    width:80%;
+    margin:100px auto;
+    border: 5px solid white;
+    text-align: center;
+    border-radius: 10px;
+    padding:20px;
+}
+.jumbotron h2{
+    text-transform: uppercase;
+    font-size: 3em;
+    color:black;
+}
+.jumbotron h3{
+    font-size: 2em;
+    color:#222;
+}
+
+.col{
+    flex:1;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card{
+    flex: 0 0 30%;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding:10px;
+    margin:10px 0;
+}
+.card img{
+    max-width: 100%;
+}
+.card h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    padding:0px;
+    margin:0;
+}
+.card .output{
+    padding: 0 20px 20px;
+}
+.card .output > button{
+    background-color: lightgrey;
+    border: 0;
+    color:white;
+    padding:10px;
+    width:100%;
+}
+
+
+
+.main{
+    background-color: white;
+    min-height: 60vh;
+    padding:10px;
+    font-size: 1.2em;
+}
+
+.myform {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  height: 500px;
+    text-align: left;
+    padding:10px;
+    max-width: 800px;
+    margin:0 auto;
+    background-color: rgba(73, 40, 40, 0.5);
+}
+.rowform {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.rowform .name, .rowform .email{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 45%;
+}
+.myform .subject,.myform .message{
+    width:80%;
+    margin: 0 auto;
+}
+#email, #name, #subject{
+    width: 100%;
+    height:50px;
+    font-size: 1.5em;
+}
+#message {
+    width: 100%;
+    font-size: 1.5em;
+}
+.message button{
+    height: 70px;
+    width:100%;
+    background-color: salmon;
+    font-size: 2em;
+}
+
+label {
+    color:white;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+.active{
+    background-color: red;
+}
+
+
+.page > h2{
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding:8px;
+    font-size: 3em;
+}
+
+.footer{
+    min-height: 200px;
+    text-align: center;
+    color: #ddd;
+    font-size: 1em;
+    padding: 20px;
+    background-color: black;
+}
+
+.main::first-letter{
+
+}
+@media all and (max-width:640px){
+    #navbar nav a{
+        font-size: 1.2em;
+        height:30px;
+    }
+    #navbar{
+        height:30px;
+    }
+    .row , .rowform{
+        flex-direction: column;
+    }
+    .card{
+        flex: auto;
+    }
+    .rowform .name, .rowform .email{
+        width: 100%;
+        display: block;
+  }
+}
